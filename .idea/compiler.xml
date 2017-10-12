@@ -23,11 +23,16 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="taotao-common" />
+        <module name="taotao-manager-mapper" />
+        <module name="taotao-manager-pojo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="taotao" target="1.7" />
       <module name="taotao-common" target="1.7" />
+      <module name="taotao-manager" target="1.7" />
+      <module name="taotao-manager-mapper" target="1.7" />
+      <module name="taotao-manager-pojo" target="1.7" />
       <module name="taotao-parent" target="1.5" />
     </bytecodeTargetLevel>
   </component>

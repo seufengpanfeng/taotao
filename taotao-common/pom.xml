@@ -14,6 +14,13 @@
     <!--默认是jar文件，所以taotao-common是jar文件-->
     <!--jar包依赖-->
     <dependencies>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+        </dependency>
+
+
         <!-- 时间操作组件 -->
         <dependency>
             <groupId>joda-time</groupId>
