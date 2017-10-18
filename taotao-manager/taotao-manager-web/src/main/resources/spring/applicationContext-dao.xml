@@ -34,7 +34,7 @@
         <!-- 加载mybatis的全局配置文件 -->
        <property name="configLocation" value="classpath:mybatis/sqlMapConfig.xml" />
     </bean>
-    <!--配置扫描包，加载mapper代理包-->
+    <!--配置扫描包，加载mapper代理包，这里是不是。xml和。java一起被扫描了-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.taotao.mapper"/>
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
