@@ -1,5 +1,8 @@
 package com.taotao.service.impl;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.taotao.common.pojo.EUDataGridResult;
 import com.taotao.mapper.TbItemMapper;
 import com.taotao.pojo.TbItem;
 import com.taotao.pojo.TbItemExample;
@@ -15,7 +18,7 @@ import java.util.List;
  */
 @Service
 public class ItemServiceImpl implements ItemService {
-
+//这个在ecllipse就没问题，因为逆向工程
     @Autowired
     private TbItemMapper tbItemMapper;
     @Override
@@ -30,5 +33,19 @@ public class ItemServiceImpl implements ItemService {
             return  list.get(0);
         }
         return null;
+    }
+
+    @Override
+    public EUDataGridResult getItemList(int page, int rows) {
+        TbItemExample example = new TbItemExample();
+        //分页处理
+        PageHelper.startPage(page,rows);
+        List<TbItem>list = tbItemMapper.selectByExample(example);
+        EUDataGridResult result = new EUDataGridResult();
+        result.setRows(list);
+        //取记录总数
+        PageInfo<TbItem>pageInfo = new PageInfo<TbItem>(list);
+        result.setTotal(pageInfo.getTotal());
+        return result;
     }
 }
