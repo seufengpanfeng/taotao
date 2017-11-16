@@ -11,5 +11,5 @@ import com.taotao.pojo.TbItem;
 public interface ItemService {
     TbItem getItemById(long itemId);
     EUDataGridResult getItemList(int page,int rows);
-    TaotaoResult ctreateItem(TbItem item,String desc) throws Exception;
+    TaotaoResult ctreateItem(TbItem item,String desc,String itemParam) throws Exception;
 }

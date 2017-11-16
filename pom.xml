@@ -10,7 +10,23 @@
     <modules>
         <module>taotao-common</module>
         <module>taotao-manager</module>
+        <module>taotao-rest</module>
+        <module>taotao-portal</module>
     </modules>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+        </dependency>
+    </dependencies>
     <packaging>pom</packaging>
     <!--properties集中定义版本号-->
     <properties>

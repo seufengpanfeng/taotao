@@ -40,11 +40,11 @@
     <div data-options="region:'center',title:''">
     	<div id="tabs" class="easyui-tabs">
 		    <div title="首页" style="padding:20px;">
-		        	
+
 		    </div>
 		</div>
     </div>
-    
+
 <script type="text/javascript">
 $(function(){
 	$('#menu').tree({
