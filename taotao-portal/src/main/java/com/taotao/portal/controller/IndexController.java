@@ -20,7 +20,6 @@ public class IndexController {
     public String showIndex(Model model){
         String adJson = contentService.getContentList();
         model.addAttribute("ad1",adJson);
-        System.out.println("这里执行了");
         return "index";
     }
     @RequestMapping(value ="/httpclient/post",method = RequestMethod.POST)
